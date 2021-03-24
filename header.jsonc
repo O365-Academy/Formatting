@@ -1,21 +1,38 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
-  "elmType": "div",
-  "txtContent": "",
-  "attributes": {
-    "class": "=if(@currentField == '', 'sp-field-severity--blocked', if(@currentField, 'sp-field-severity--good', 'sp-field-severity--blocked')) + ' ms-fontColor-neutralSecondary'"
+    "elmType": "div",
+    "style": {
+        "display": "flex",
+        "justify-content": "space-between",
+        "border-radius": "3px 3px 0 0",
+        "padding": "8px",
+        "font-size": "24px"
     },
-  "children": [
-    {
-      "elmType": "span",
-      "style": {
-        "display": "inline-block",
-        "padding": "20px 50px",
-        "font-size":"16px"
-      },
-      "attributes": {
-        "iconName": "=if(@currentField == '', 'ErrorBadge', if(@currentField, 'CheckMark', 'ErrorBadge12'))"
-      }
-    }
-  ]
+    "attributes": {
+        "class": "=if([$Status], 'sp-field-severity--good',  'sp-field-severity--blocked'"
+    },
+    "children": [
+        {
+            "elmType": "div",
+            "attributes": {
+                "iconName": "D365TalentLearn"
+            }
+        },
+        {
+            "elmType": "div",
+            "txtContent": {
+                "operator": "+",
+                "operands": [
+                    "Candidate: ",
+                    "[$Title]"
+                ]
+            }
+        },
+        {
+            "elmType": "div",
+            "attributes": {
+                "iconName": "=if([$Status], 'CheckMark','ErrorBadge12')",
+                "title": "[$Status]"
+            }
+        }
+    ]
 }
