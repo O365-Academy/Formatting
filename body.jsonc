@@ -1,0 +1,30 @@
+{
+    "sections": [
+        {
+            "displayname": "Candidate Details",
+            "fields": [
+                "Candidate Name",
+                "Profile Picture",
+                "Height",
+                "Weight",
+                "Year Of Experience",
+                "Gender"
+            ]
+        },
+        {
+            "displayname": "Request Details",
+            "fields": [
+                "Sports",
+                "Status",
+                "Comments",
+                "Email/Chat"
+            ]
+        },
+        {
+            "displayname": "Others",
+            "fields": [
+                "Email/Chat"
+            ]
+        }
+    ]
+}
